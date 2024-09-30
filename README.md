@@ -23,7 +23,7 @@ The Pizza Ordering System provides a user-friendly interface for customers to se
 
 ### For the Windows Forms Application (C#):
 1. Ensure you have Visual Studio installed.
-2. Clone or download the repository from this link: https://github.com/omardev11/Pizza-Ordering-System.git
+2. Clone or download the repository from this link: https://github.com/omardev11/The-Pizza-Project.git
 3. Open the solution file in Visual Studio.
 4. Build the project and run the application to start ordering your pizza!
 
