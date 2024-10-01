@@ -13,6 +13,8 @@ namespace Pizza_Project
 {
     public partial class Form1 : Form
     {
+        OrderPizza GlobalorderPizza = new OrderPizza();
+
         static Stack<string> Stoppings = new Stack<string>();
         static float ToTalPizza = 1;
       
@@ -20,6 +22,40 @@ namespace Pizza_Project
         {
             InitializeComponent();
         }
+
+        public class OrderDetailArg : EventArgs
+        {
+            public string OrderName { get; set; }
+            public double OrderPrice { get; set; }
+            public string ClientEmail { get; set; }
+            public string ClientName { get; set; }
+
+            public OrderDetailArg(string ordername, double orderprice, string clientemial, string clientName)
+            {
+                OrderName = ordername;
+                OrderPrice = orderprice;
+                ClientEmail = clientemial;
+                ClientName = clientName;
+            }
+        }
+
+        public class OrderPizza
+        {
+            public event EventHandler<OrderDetailArg> OnOrderingPizza;
+          
+
+            public void OrderAnewPizza(string ordername , string clientEmail,double orderPrice,string ClientName)
+            {
+                OnOrderingOrder(new OrderDetailArg(ordername, orderPrice,clientEmail,ClientName));
+            }
+
+            protected void OnOrderingOrder(OrderDetailArg e)
+            {
+                if (OnOrderingPizza != null)
+                    OnOrderingPizza(this, e);
+            }
+        }
+
 
         float GetSellectedSizePrice()
         {
@@ -120,20 +156,8 @@ namespace Pizza_Project
             lblToppingsEdit.Text = TotalTopping;
         }
 
-        private void radioButton2_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
-        }
+      
+       
         
 
         private void rdbLarge_CheckedChanged(object sender, EventArgs e)
@@ -175,13 +199,7 @@ namespace Pizza_Project
 
         }
 
-        private void lblTotalPriceEdit_Click(object sender, EventArgs e)
-        {
-
-        }
-
-       
-
+      
         private void btnOrderPizza_Click(object sender, EventArgs e)
         {
             if (MessageBox.Show("Conform Order","Conform",MessageBoxButtons.YesNo,
@@ -192,6 +210,17 @@ namespace Pizza_Project
                 grbWhereToEat.Enabled = false;
                 grbCrustType.Enabled = false;
                 btnOrderPizza.Enabled = false;
+
+                GlobalorderPizza.OrderAnewPizza("Pizza", GlobalSetting.Email, Convert.ToDouble(CalculateTotalPrice()), GlobalSetting.Name);
+                EmailService emailService = new EmailService();
+                //RestaruntService restaruntService = new RestaruntService();
+                //CargoService cargoService = new CargoService(); 
+
+                emailService.Show();
+                //restaruntService.Show();
+                //cargoService.Show();
+
+                
 
             }
             numericUpDown1.Enabled = false;
@@ -258,6 +287,14 @@ namespace Pizza_Project
             ToTalPizza = 0;
             ToTalPizza += (float)numericUpDown1.Value;
             UpdateToatlPrice();
+
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            EmailService.ProvidingEmailService.Subscribe(GlobalorderPizza);
+            RestaruntService.REstarungServiceGivingInfoToClient.Subscribe(GlobalorderPizza);
+            CargoService.CargoServicesGivingInfoToClient.Subscribe(GlobalorderPizza);
 
         }
     }

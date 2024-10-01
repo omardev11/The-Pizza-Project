@@ -194,7 +194,6 @@
             this.label3.Size = new System.Drawing.Size(128, 20);
             this.label3.TabIndex = 13;
             this.label3.Text = "Order Summary";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // lblSize
             // 
@@ -296,7 +295,6 @@
             this.lblTotalPriceEdit.Size = new System.Drawing.Size(112, 83);
             this.lblTotalPriceEdit.TabIndex = 23;
             this.lblTotalPriceEdit.Text = "$30";
-            this.lblTotalPriceEdit.Click += new System.EventHandler(this.lblTotalPriceEdit_Click);
             // 
             // grbWhereToEat
             // 
@@ -359,7 +357,6 @@
             // 
             // gbToppings
             // 
-            this.gbToppings.BackgroundImage = global::Pizza_Project.Properties.Resources.download__3_;
             this.gbToppings.Controls.Add(this.chkGreenPappers);
             this.gbToppings.Controls.Add(this.chkOlives);
             this.gbToppings.Controls.Add(this.chkOnion);
@@ -471,7 +468,7 @@
             this.BackColor = System.Drawing.Color.Gray;
             this.BackgroundImage = global::Pizza_Project.Properties.Resources.download__3_;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1232, 578);
+            this.ClientSize = new System.Drawing.Size(1374, 578);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.numericUpDown1);
             this.Controls.Add(this.gbToppings);

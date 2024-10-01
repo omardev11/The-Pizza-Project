@@ -9,3 +9,17 @@ E:\apps\c++\programing advice course\C# level 1\Pizza Project\obj\Debug\Pizza Pr
 E:\apps\c++\programing advice course\C# level 1\Pizza Project\obj\Debug\Pizza Project.exe
 E:\apps\c++\programing advice course\C# level 1\Pizza Project\obj\Debug\Pizza Project.pdb
 E:\apps\c++\programing advice course\C# level 1\Pizza Project\obj\Debug\Pizza_Project.Form2.resources
+E:\apps\c++\My Projects\Pizza Project\bin\Debug\Pizza Project.exe.config
+E:\apps\c++\My Projects\Pizza Project\bin\Debug\Pizza Project.exe
+E:\apps\c++\My Projects\Pizza Project\bin\Debug\Pizza Project.pdb
+E:\apps\c++\My Projects\Pizza Project\obj\Debug\Pizza Project.csproj.AssemblyReference.cache
+E:\apps\c++\My Projects\Pizza Project\obj\Debug\Pizza_Project.Form1.resources
+E:\apps\c++\My Projects\Pizza Project\obj\Debug\Pizza_Project.Properties.Resources.resources
+E:\apps\c++\My Projects\Pizza Project\obj\Debug\Pizza Project.csproj.GenerateResource.cache
+E:\apps\c++\My Projects\Pizza Project\obj\Debug\Pizza Project.csproj.CoreCompileInputs.cache
+E:\apps\c++\My Projects\Pizza Project\obj\Debug\Pizza Project.exe
+E:\apps\c++\My Projects\Pizza Project\obj\Debug\Pizza Project.pdb
+E:\apps\c++\My Projects\Pizza Project\obj\Debug\Pizza_Project.EmailService.resources
+E:\apps\c++\My Projects\Pizza Project\obj\Debug\Pizza_Project.Login.resources
+E:\apps\c++\My Projects\Pizza Project\obj\Debug\Pizza_Project.CargoService.resources
+E:\apps\c++\My Projects\Pizza Project\obj\Debug\Pizza_Project.RestaruntService.resources
